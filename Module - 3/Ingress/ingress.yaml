@@ -4,16 +4,16 @@ metadata:
   name: app-ingress
 spec:
   rules:
-  - host: kubernetesfederatedcluster.com
+  - host: kubernetesfederatedcluster.com/app2
     http:
       paths: 
       - path: /app1
         backend:
-          serviceName: app1
+          serviceName: app1.default.svc.cluster.local
           servicePort: 80
       - path: /app2
         backend:
-          serviceName: app2
+          serviceName: app2.default.svc.cluter.local 
           servicePort: 80
       - path: /app3
         backend:
